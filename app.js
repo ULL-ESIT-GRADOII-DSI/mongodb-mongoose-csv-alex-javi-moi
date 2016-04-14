@@ -19,9 +19,10 @@ app.get('/', (request, response) => {
    response.render('index', { title: "Comma Separated Value Analyzer", error:""});
 });
 
-/*app.get('/csv', (request, response) => {
-  XXXXXXXXXXXXXXX XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXX
-});*/
+app.get('/csv', (request, response) => {
+  response.send({ "rows": calculate(request.query.input) });
+  
+});
 
 app.listen(app.get('port'), () => {
     console.log(`Node app is running at localhost: ${app.get('port')}` );
