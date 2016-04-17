@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  height: 100%;
+  background-color: #93CE95;
+  font-family: sans-serif;
+  font-size: 100; }
+
+nav {
+  height: 7.5%; }
+  nav ul {
+    list-style: none;
+    background-color: #303030; }
+  nav > ul {
+    position: relative;
+    display: table;
+    width: 100%; }
+  nav > ul li {
+    display: table-cell; }
+  nav > ul > li:hover > ul {
+    display: block;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px; }
+  nav ul li ul {
+    display: block;
+    position: absolute;
+    background: #303030;
+    width: auto; }
+  nav ul li #paginas li {
+    width: auto; }
+  nav ul li #repos li {
+    width: auto; }
+  nav > ul > li > ul {
+    display: none; }
+  nav > ul li a {
+    color: white;
+    display: block;
+    line-height: 25px;
+    padding: 12.5px;
+    position: relative;
+    text-align: center;
+    text-decoration: none; }
+  nav ul li a:hover {
+    background: white;
+    color: #303030;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px; }
+
+.nav {
+  position: static; }
+
+#contenido_total {
+  height: 70%;
+  background-color: #93CE95;
+  width: 100%; }
+  #contenido_total #titulo_practica {
+    margin-top: 5%;
+    text-align: center;
+    color: #555755; }
+  #contenido_total #izquierda {
+    float: left;
+    width: 50%;
+    text-align: center;
+    margin-top: 8%;
+    color: black;
+    font-size: 20px; }
+  #contenido_total #derecha {
+    float: left;
+    width: 50%;
+    background-color: blue; }
+  #contenido_total table.center {
+    font-weight: bold;
+    color: black;
+    text-align: none;
+    margin-left: 0px;
+    margin-top: 100px;
+    border: none;
+    border-color: none;
+    background-color: #93CE95; }
+    #contenido_total table.center button {
+      width: 70px; }
+    #contenido_total table.center button:hover {
+      background-color: black;
+      color: white; }
+  #contenido_total .output tr:nth-child(odd) {
+    background-color: #eee; }
+  #contenido_total .output tr:nth-child(even) {
+    background-color: #00FF66; }
+  #contenido_total .error td {
+    background-color: red; }
+  #contenido_total #finaltable {
+    margin-left: 900px; }
+
+/*# sourceMappingURL=main.css.map */
