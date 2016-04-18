@@ -1,40 +1,27 @@
-# Práctica 2: Comma separated values (CSV) with AJAX
+#**Practica 8 de Desarrollo de Sistemas Informáticos. CSV usando AJAX**
 
-## jQuery.get( url [, data ] [, success ] [, dataType ] )
-* url
-  * Type: String
-  * A string containing the URL to which the request is sent.
-* data
-  * Type: PlainObject or String
-  * A plain object or string that is sent to the server with the request.
-* success
-  * Type: Function( PlainObject data, String textStatus, jqXHR jqXHR )
-  * A callback function that is executed if the request succeeds. 
-    Required if `dataType` is provided, but you can use `null` or `jQuery.noop` as a placeholder.
-* dataType
-  * Type: String
-  * The type of data expected from the server. Default: Intelligent Guess (xml, json, script, text, html).
+El requisito de esta practica es realizar un request AJAX usando jQuery, ECMA6 y subirla en Heroku
 
-## jQuery.get( [settings ] )
-* settings
-  * Type: PlainObject
-  * A set of key/value pairs that configure the Ajax request. 
-  * All properties except for `url` are optional. 
-  * A default can be set for any option with `$.ajaxSetup()`.
+[Descripcion de la practica](https://campusvirtual.ull.es/1516/mod/page/view.php?id=189370)
 
-This is a shorthand Ajax function, which is equivalent to:
+### Despliegue de la práctica
+* [Despliegue en Heroku](https://dsip8.herokuapp.com/)
 
-```javascript
-$.ajax({
-  url: url,
-  data: data,
-  success: success,
-  dataType: dataType
-});
-```
+### Repositorios organización
+* [Repositorio](https://github.com/ULL-ESIT-GRADOII-DSI/ajax-ecma6-ficheros-alex-javi-moi.git)
 
-The success callback function is passed the returned data, which will be an XML root element, text string, JavaScript file, or JSON object, depending on the MIME type of the response. It is also passed the text status of the response.
 
-# Heroku 
+###Páginas personales
+#####Alexander
+* [Página personal](http://alu0100767421.github.io/)
+
+#####Javier
+* [Página personal](http://alu0100505009.github.io/)
+
+#####Moisés
+* [Página personal](http://alu0100782851.github.io/)
+
+
+# Ejemplo de profesor 
 https://cvsajax.herokuapp.com/
 
