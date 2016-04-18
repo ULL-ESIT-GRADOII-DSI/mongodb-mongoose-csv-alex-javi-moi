@@ -1,28 +1,57 @@
-  <div class="contenido_total">
-    <div class="titulo_practica">
-      <h1 align="center">
-        <font color="blue">Comma Separated Values (CSV) Analyzer with Ajax</font>
-      </h1>
-      <hr>
+  <div id="contenido_total">
+    <div>
+      <nav id="nav" role="navigation">
+	          <ul class="menu">
+              <li><a href="https://github.com/ULL-ESIT-GRADOII-DSI/ajax-ecma6-ficheros-alex-javi-moi.git" title="Repositorio Github" >Repositorio Github</a></li>
+              <li><a href="#" title="Páginas">Páginas Personales</a>
+                  <ul id="paginas">
+                      <li><a href="http://alu0100767421.github.io">Alexander</a></li>
+                      <li><a href="http://alu0100505009.github.io">Javier</a></li>
+                      <li><a href="http://alu0100782851.github.io">Moisés</a></li>
+                  </ul>
+              </li>
+              <li><a href="https://campusvirtual.ull.es/1516/mod/page/view.php?id=189370" title="Descripcion">Descripción de la Práctica</a></li>
+            </ul>
+      </nav>
     </div>
+    
+    
+    
+    
+    <div id="titulo_practica">
+      <h1>Comma Separated Values Analizador con AJAX</h1>
+    </div>
+    
+    <div id="izquierda">
+      <p>Opciones:<br></p>
+      <p>Escribir en el recuadro su entrada CSV<br></p>
+      <p>Arrastrar al recuadro su fichero CSV<br></p>
+      <p>Cargue los ejemplos</p>
+    </div>
+    
+    <div id="derecha">
+      
+    </div>
+    
     <div class="contenido">
       <table class="center" id="input">
-        <tr><th>Escriba aquí una entrada CSV o bien</th></tr>
-        <tr><th>Arrastre un fichero CSV hasta la zona de entrada</th></tr>
+        
         <tr>
           <th>
             <textarea class = "drop_zone" autofocus="" cols = "80" rows = "5" id="original"></textarea>
           </th>
-          <th>
-            <button type="button" id="parse"> Analizar!</button>
-          </th>
         </tr>
         <tr>
+          <th>
+            <button type="button" id="parse"> Analizar</button>
+          </th>
         </tr>
+        
+       
         <tr>
           <th>
             <div class="example">
-              Click para cargar ejemplos:
+              Ejemplos:
               <button class ="example" type="button">input</button>
               <button class ="example" type="button">input2</button>
               <button class ="example" type="button">input3</button>
@@ -38,6 +67,10 @@
       </table>
 
       <div class="output" id="finaltable">
+        
       </div>
     </div>
+    
+    
+    
   </div>
