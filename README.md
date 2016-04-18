@@ -21,7 +21,3 @@ El requisito de esta practica es realizar un request AJAX usando jQuery, ECMA6 y
 #####Moisés
 * [Página personal](http://alu0100782851.github.io/)
 
-
-# Ejemplo de profesor 
-https://cvsajax.herokuapp.com/
-
