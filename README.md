@@ -1,6 +1,12 @@
-#**Practica 8 de Desarrollo de Sistemas Informáticos. CSV usando AJAX**
+#**Practica 9 de Desarrollo de Sistemas Informáticos. CSV usando MongoDB**
 
-El requisito de esta practica es realizar un request AJAX usando jQuery, ECMA6 y subirla en Heroku
+
+Añadir un botón guardar. Cuando se hace click en dicho botón se guarda la entrada actual en una base de datos MongoDB.
+El contenido de la entrada actual se guarda con un nombre que se solicita previamente al usuario.
+Usaremos Mongoose para acceder a la base de datos.
+Sólo se guardan hasta un límite de cuatro ejemplos en la Base de Datos.
+Despliegue en Cloud9.
+
 
 [Descripcion de la practica](https://campusvirtual.ull.es/1516/mod/page/view.php?id=189370)
 
