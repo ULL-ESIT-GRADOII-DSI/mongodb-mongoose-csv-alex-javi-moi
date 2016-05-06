@@ -67,24 +67,60 @@ const handleDragOver = (evt) => {
 }
 
 $(document).ready(() => {
+    let contador=3;
     let original = document.getElementById("original");  
     if (window.localStorage && localStorage.original) {
       original.value = localStorage.original;
     }
 
-   /* Request AJAX para que se calcule la tabla */
-   $("#parse").click( () => {
+    /* Request AJAX para que se calcule la tabla */
+    $("#parse").click( () => {
         if (window.localStorage) localStorage.original = original.value;
         $.get("/csv", /* Request AJAX para que se calcule la tabla */
           { input: original.value }, 
           fillTable,
           'json'
         );
-   });
-   /* botones para rellenar el textarea */
-   $('button.example').each( (_,y) => {
-     $(y).click( () => { dump(`${$(y).text()}.txt`); });
-   });
+    });
+    
+    /* botones para rellenar el textarea */
+    $('button.example').each( (_,y) => {
+     /*$(y).click( () => { dump(`${$(y).text()}.txt`); });*/
+      $(y).click( () => {dump(`${$(y).text()}`); 
+        $.get("/buscar",{name: $(y).text()},
+          (readData) => {
+          console.log("Entre aqui"+ readData[0].text)
+          $("#original").val(readData[0].text);
+        });
+      });
+    });
+    
+
+    $(".guardar").click( () => { 
+      let dataString = $('#original').val();
+      
+      $.get("/mongo/" + $("#guardado").val(),
+      {
+          text: dataString,
+          cont: contador++
+      })
+      
+      $.get("/mostrarBotones", {}, (readData) => {
+            for (var i = 0; i < readData.length; i++) {
+              if (readData[i]){
+                    $('button.example').get(i).className = "example";
+                    /*$('button.example').get(i).textContent= readData[i].name;*/
+              }
+            }
+            
+            $('button.example').get((readData.length)-1).textContent= readData[(readData.length)-1].name;
+            $("#boton").fadeIn();
+
+      });
+      return false;
+    });
+   
+   
 
     // Setup the drag and drop listeners.
     //var dropZone = document.getElementsByClassName('drop_zone')[0];
@@ -94,4 +130,5 @@ $(document).ready(() => {
     let inputFile = $('.inputfile')[0];
     inputFile.addEventListener('change', handleFileSelect, false);
  });
+    
 })();
