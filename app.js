@@ -38,3 +38,13 @@ app.get('/mostrarBotones', function(req, res) {
         res.send(file);
     });
 });
+
+app.get('/buscar', function(req, res) {
+    console.log("req: " + req.query.name);
+    datos.find({name: req.query.name}, 
+        function(err, file) {
+            console.log(file);
+            res.send(file);
+        }
+    );
+});
