@@ -29,6 +29,24 @@ app.listen(app.get('port'), () => {
     console.log(`Node app is running at localhost: ${app.get('port')}` );
 });
 
+app.get('/mongo/:variable', function(req, res) {
+ datos.find({}, function(err, files) {
+        if (err)
+            return err;
+        if (files.length > 3) {
+            datos.remove({name: files[3].name}).exec();
+        }
+        let newDatos = new datos({name: req.params.variable, text: req.query.text});
+        newDatos.save(function(err){ 
+          if(err) res.send('Error');
+          res.send('Correcto');
+          console.log("La Base de Datos ha sido actualizada correctamente");
+          console.log("Nombre:" + newDatos.name );
+          console.log("Datos: " + newDatos);
+        });
+    });
+
+});
 
 app.get('/mostrarBotones', function(req, res) {
     datos.find({}, function(err, file) {
