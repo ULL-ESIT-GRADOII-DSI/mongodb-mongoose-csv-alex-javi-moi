@@ -14,11 +14,11 @@ const TablaEjemplo = mongoose.Schema({
 
 });
 // añadimos la tabla a la base de datos
-const Datos = mongoose.model("Datos",TablaEjemplo);
+const datos = mongoose.model("datos",TablaEjemplo);
 //Incluimos los datos en la tabla de datos
-  let input0 = new Datos({ name: 'input0', text: '"producto",           "precio"\n"camisa",             "4,3"\n"libro de O\"Reilly", "7,2"' });
-  let input1 = new Datos({ name: 'input1', text: '"producto",           "precio"  "fecha"\n"camisa",             "4,3",    "14/01"\n"libro de O\"Reilly", "7,2"     "13/02"'});
-  let input2 = new Datos({ name: 'input2', text: '"edad",  "sueldo",  "peso"\n,         "6000€",  "90Kg"\n47,       "3000€",  "100Kg"'});
+  let input0 = new datos({ name: 'input0', text: '"producto",           "precio"\n"camisa",             "4,3"\n"libro de O\"Reilly", "7,2"' });
+  let input1 = new datos({ name: 'input1', text: '"producto",           "precio"  "fecha"\n"camisa",             "4,3",    "14/01"\n"libro de O\"Reilly", "7,2"     "13/02"'});
+  let input2 = new datos({ name: 'input2', text: '"edad",  "sueldo",  "peso"\n,         "6000€",  "90Kg"\n47,       "3000€",  "100Kg"'});
   
 
   let p1 = input0.save(function (err, file1) {
@@ -38,6 +38,6 @@ const Datos = mongoose.model("Datos",TablaEjemplo);
     
   });
   
-module.exports = Datos;
+module.exports = datos;
 })()  
 
